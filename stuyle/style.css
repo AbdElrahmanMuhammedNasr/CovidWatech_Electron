@@ -1,0 +1,20 @@
+body {
+  background-color: #2e3030;
+  user-select: none;
+  -webkit-app-region: drag;
+  border-radius: 20px;
+}
+
+body .result {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+body strong {
+  font-size: 1.6rem;
+}
+
+body p {
+  font-weight: bolder;
+}

@@ -2,18 +2,94 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./stuyle/style.css">
+    
+    <title>COVID-19</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
+    
+    <div class="bg-dark d-flex justify-content-center">
+      <section class="m-3 w-75 d-flex justify-content-center">
+        <input id="search"class="form-control me-2" type="search" placeholder="Search">
+        <button id="myBtn" class="btn btn-primary" type="submit">Search</button>
+      </section>
+    </div>
+
+    <div class="result m-5">
+      <h1 id="country">All world</h1>
+      <!-- come from api -->
+      <h4 id="takenAt"></h4>
+    
+      <div class="container overflow-hidden">
+        <div class="row gy-5">
+
+          <div class="col-12">
+            <div class="p-3 border bg-light">
+              <strong>Total Test</strong>
+              <!--  the data comre form API -->
+               <p id="totalTests"></p> 
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <strong>Total Case</strong>
+              <!--  the data comre form API -->
+               <p id="totalCase"></p> 
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <strong>Total Death</strong>
+               <!--  the data comre form API -->
+               <p id="totalDeth"></p> 
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <strong>New Case</strong>
+               <!--  the data comre form API -->
+               <p id="newCase"></p> 
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <strong>New Death</strong>
+               <!--  the data comre form API -->
+               <p id="newDeth"></p> 
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <strong>Total Recovered</strong>
+               <!--  the data comre form API -->
+               <p id="totalRecovered"></p> 
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="p-3 border bg-light">
+              <strong>Active Cases</strong>
+               <!--  the data comre form API -->
+               <p id="ActiveCase"></p> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <p id="memory"></p>
+    </div>
+
+   
+    <script src="./Js/HttpRequest.js"></script>
     <script src="./renderer.js"></script>
   </body>
 </html>
